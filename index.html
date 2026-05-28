@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JobsPipe — Open Jobs Data &amp; Resources</title>
+  <meta name="description" content="Open jobs-data resources from JobsPipe: a free Upwork jobs dataset, a guide to scraping Upwork, and freelance-market statistics. Full jobs API at jobspipe.dev." />
+  <link rel="canonical" href="https://jobspipe.github.io/" />
+  <style>
+    :root { --ink:#1a1a2e; --ink2:#55556b; --primary:#5b4bd6; --line:#e7e7ef; --bg:#faf9f6; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif; color:var(--ink); background:var(--bg); line-height:1.6; }
+    .wrap { max-width:760px; margin:0 auto; padding:64px 20px 80px; }
+    h1 { font-size:40px; line-height:1.1; letter-spacing:-0.02em; margin:0 0 16px; }
+    h2 { font-size:24px; margin:44px 0 12px; }
+    p { color:var(--ink2); font-size:17px; }
+    a { color:var(--primary); }
+    .lede { font-size:19px; }
+    .stats { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin:28px 0; }
+    .stat { border:1px solid var(--line); background:#fff; border-radius:10px; padding:16px; }
+    .stat b { display:block; font-size:26px; color:var(--ink); }
+    .stat span { font-size:13px; color:var(--ink2); }
+    ul { padding-left:20px; }
+    li { margin:8px 0; color:var(--ink2); font-size:17px; }
+    .cta { display:inline-block; margin-top:8px; background:var(--primary); color:#fff; text-decoration:none; padding:12px 20px; border-radius:8px; font-weight:700; }
+    footer { margin-top:56px; padding-top:24px; border-top:1px solid var(--line); font-size:14px; color:var(--ink2); }
+    @media (min-width:600px){ .stats{ grid-template-columns:repeat(4,1fr);} }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>JobsPipe — Open Jobs Data &amp; Resources</h1>
+    <p class="lede">
+      JobsPipe is building a unified API over public job postings across 30+
+      applicant-tracking systems and job boards. This page collects our open,
+      free resources. The full product lives at
+      <a href="https://jobspipe.dev/">jobspipe.dev</a>.
+    </p>
+
+    <h2>Free Upwork jobs dataset</h2>
+    <p>
+      A structured snapshot of Upwork&rsquo;s public job listings — budgets,
+      hourly rates, experience level, category, skills, proposal counts, and
+      client signals (country, total spend, rating, payment-verified). Browse it
+      or download an open sample.
+    </p>
+    <div class="stats">
+      <div class="stat"><b>5,001</b><span>listings sampled</span></div>
+      <div class="stat"><b>82%</b><span>payment-verified clients</span></div>
+      <div class="stat"><b>$100</b><span>median fixed budget</span></div>
+      <div class="stat"><b>$12/hr</b><span>median starting rate</span></div>
+    </div>
+    <p>
+      <a class="cta" href="https://jobspipe.dev/upwork-jobs">Browse the Upwork jobs dataset →</a>
+    </p>
+    <ul>
+      <li><a href="https://github.com/jobspipe/jobspipe-upwork-sample">Open 100-row sample on GitHub</a> (CC BY 4.0)</li>
+      <li><a href="https://jobspipe.dev/upwork-jobs-sample.csv">Download the sample CSV</a></li>
+    </ul>
+
+    <h2>Guides &amp; analysis</h2>
+    <ul>
+      <li><a href="https://jobspipe.dev/how-to-scrape-upwork">How to scrape Upwork: 5 methods compared</a></li>
+      <li><a href="https://jobspipe.dev/blog/upwork-statistics-2026">Upwork statistics 2026: what 5,000 live listings reveal</a></li>
+    </ul>
+
+    <h2>The jobs API</h2>
+    <p>
+      One endpoint, normalized JSON, across Workday, Greenhouse, Lever, Ashby and
+      30+ more sources. Explore the API and docs at
+      <a href="https://jobspipe.dev/">jobspipe.dev</a>.
+    </p>
+
+    <footer>
+      Maintained by <a href="https://jobspipe.dev/">JobsPipe</a>. Data sourced
+      from public job listings. Open sample released under CC BY 4.0.
+    </footer>
+  </main>
+</body>
+</html>
