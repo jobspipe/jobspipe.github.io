@@ -3,77 +3,118 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>JobsPipe — Open Jobs Data &amp; Resources</title>
-  <meta name="description" content="Open jobs-data resources from JobsPipe: a free Upwork jobs dataset, a guide to scraping Upwork, and freelance-market statistics. Full jobs API at jobspipe.dev." />
+  <title>JobsPipe — One API for Jobs Data Across 30+ ATSs</title>
+  <meta name="description" content="JobsPipe is a unified API for public job postings across Workday, Greenhouse, Lever, Ashby and 30+ ATSs and job boards. Open resources: jobs data, ATS guides, comparisons, and a free Upwork dataset." />
   <link rel="canonical" href="https://jobspipe.github.io/" />
   <style>
     :root { --ink:#1a1a2e; --ink2:#55556b; --primary:#5b4bd6; --line:#e7e7ef; --bg:#faf9f6; }
-    * { box-sizing: border-box; }
+    * { box-sizing:border-box; }
     body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif; color:var(--ink); background:var(--bg); line-height:1.6; }
-    .wrap { max-width:760px; margin:0 auto; padding:64px 20px 80px; }
+    .wrap { max-width:820px; margin:0 auto; padding:64px 20px 80px; }
     h1 { font-size:40px; line-height:1.1; letter-spacing:-0.02em; margin:0 0 16px; }
-    h2 { font-size:24px; margin:44px 0 12px; }
+    h2 { font-size:23px; margin:44px 0 6px; }
     p { color:var(--ink2); font-size:17px; }
-    a { color:var(--primary); }
     .lede { font-size:19px; }
-    .stats { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin:28px 0; }
-    .stat { border:1px solid var(--line); background:#fff; border-radius:10px; padding:16px; }
-    .stat b { display:block; font-size:26px; color:var(--ink); }
+    a { color:var(--primary); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .sub { color:var(--ink2); font-size:15px; margin:0 0 14px; }
+    .grid { display:grid; grid-template-columns:1fr; gap:6px 24px; margin:10px 0 4px; }
+    .grid a { font-size:16px; padding:3px 0; }
+    .stats { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin:24px 0; }
+    .stat { border:1px solid var(--line); background:#fff; border-radius:10px; padding:14px; }
+    .stat b { display:block; font-size:24px; color:var(--ink); }
     .stat span { font-size:13px; color:var(--ink2); }
-    ul { padding-left:20px; }
-    li { margin:8px 0; color:var(--ink2); font-size:17px; }
-    .cta { display:inline-block; margin-top:8px; background:var(--primary); color:#fff; text-decoration:none; padding:12px 20px; border-radius:8px; font-weight:700; }
+    .cta { display:inline-block; margin-top:10px; background:var(--primary); color:#fff; padding:12px 20px; border-radius:8px; font-weight:700; }
+    .cta:hover { text-decoration:none; opacity:.92; }
     footer { margin-top:56px; padding-top:24px; border-top:1px solid var(--line); font-size:14px; color:var(--ink2); }
-    @media (min-width:600px){ .stats{ grid-template-columns:repeat(4,1fr);} }
+    @media (min-width:620px){ .grid{ grid-template-columns:1fr 1fr; } .stats{ grid-template-columns:repeat(4,1fr); } }
   </style>
 </head>
 <body>
   <main class="wrap">
-    <h1>JobsPipe — Open Jobs Data &amp; Resources</h1>
+    <h1>JobsPipe — one API for jobs data</h1>
     <p class="lede">
-      JobsPipe is building a unified API over public job postings across 30+
-      applicant-tracking systems and job boards. This page collects our open,
-      free resources. The full product lives at
+      JobsPipe is a unified API for public job postings across 30+ applicant-tracking
+      systems and job boards — Workday, Greenhouse, Lever, Ashby and more — with one
+      normalized JSON schema. This is our open-resource hub; the product lives at
       <a href="https://jobspipe.dev/">jobspipe.dev</a>.
     </p>
-
-    <h2>Free Upwork jobs dataset</h2>
-    <p>
-      A structured snapshot of Upwork&rsquo;s public job listings — budgets,
-      hourly rates, experience level, category, skills, proposal counts, and
-      client signals (country, total spend, rating, payment-verified). Browse it
-      or download an open sample.
-    </p>
-    <div class="stats">
-      <div class="stat"><b>5,001</b><span>listings sampled</span></div>
-      <div class="stat"><b>82%</b><span>payment-verified clients</span></div>
-      <div class="stat"><b>$100</b><span>median fixed budget</span></div>
-      <div class="stat"><b>$12/hr</b><span>median starting rate</span></div>
-    </div>
-    <p>
-      <a class="cta" href="https://jobspipe.dev/upwork-jobs">Browse the Upwork jobs dataset →</a>
-    </p>
-    <ul>
-      <li><a href="https://github.com/jobspipe/jobspipe-upwork-sample">Open 100-row sample on GitHub</a> (CC BY 4.0)</li>
-      <li><a href="https://jobspipe.dev/upwork-jobs-sample.csv">Download the sample CSV</a></li>
-    </ul>
-
-    <h2>Guides &amp; analysis</h2>
-    <ul>
-      <li><a href="https://jobspipe.dev/how-to-scrape-upwork">How to scrape Upwork: 5 methods compared</a></li>
-      <li><a href="https://jobspipe.dev/blog/upwork-statistics-2026">Upwork statistics 2026: what 5,000 live listings reveal</a></li>
-    </ul>
+    <p><a class="cta" href="https://jobspipe.dev/">Explore JobsPipe →</a></p>
 
     <h2>The jobs API</h2>
-    <p>
-      One endpoint, normalized JSON, across Workday, Greenhouse, Lever, Ashby and
-      30+ more sources. Explore the API and docs at
-      <a href="https://jobspipe.dev/">jobspipe.dev</a>.
-    </p>
+    <p class="sub">One endpoint, every source, the same response shape.</p>
+    <div class="grid">
+      <a href="https://jobspipe.dev/jobs-api">Jobs API overview</a>
+      <a href="https://jobspipe.dev/docs">API documentation</a>
+      <a href="https://jobspipe.dev/sources">All data sources</a>
+      <a href="https://jobspipe.dev/changelog">Changelog</a>
+      <a href="https://jobspipe.dev/signup">Get a free API key</a>
+      <a href="https://jobspipe.dev/book">Book a call</a>
+    </div>
+
+    <h2>Sources we cover</h2>
+    <p class="sub">Per-source guides for each ATS and job board, with the exact public data we pull.</p>
+    <div class="grid">
+      <a href="https://jobspipe.dev/sources/workday">Workday</a>
+      <a href="https://jobspipe.dev/sources/greenhouse">Greenhouse</a>
+      <a href="https://jobspipe.dev/sources/lever">Lever</a>
+      <a href="https://jobspipe.dev/sources/ashby">Ashby</a>
+      <a href="https://jobspipe.dev/sources/smartrecruiters">SmartRecruiters</a>
+      <a href="https://jobspipe.dev/sources/icims">iCIMS</a>
+      <a href="https://jobspipe.dev/sources/workable">Workable</a>
+      <a href="https://jobspipe.dev/sources/bamboohr">BambooHR</a>
+      <a href="https://jobspipe.dev/sources/jazzhr">JazzHR</a>
+      <a href="https://jobspipe.dev/sources/indeed">Indeed</a>
+      <a href="https://jobspipe.dev/sources/glassdoor">Glassdoor</a>
+      <a href="https://jobspipe.dev/sources/linkedin">LinkedIn</a>
+      <a href="https://jobspipe.dev/sources/ziprecruiter">ZipRecruiter</a>
+      <a href="https://jobspipe.dev/sources">+ 30 more sources</a>
+    </div>
+
+    <h2>Free tools &amp; open data</h2>
+    <p class="sub">No-signup tools and open datasets from JobsPipe.</p>
+    <div class="grid">
+      <a href="https://jobspipe.dev/stack">Tech-stack scanner</a>
+      <a href="https://jobspipe.dev/upwork-jobs">Upwork jobs dataset</a>
+      <a href="https://github.com/jobspipe/jobspipe-upwork-sample">Open Upwork sample (GitHub, CC BY)</a>
+      <a href="https://jobspipe.dev/upwork-jobs-sample.csv">Download sample CSV</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>30+</b><span>ATS &amp; job-board sources</span></div>
+      <div class="stat"><b>1</b><span>normalized JSON schema</span></div>
+      <div class="stat"><b>5,001</b><span>listings in the Upwork sample</span></div>
+      <div class="stat"><b>$0</b><span>free tier to start</span></div>
+    </div>
+
+    <h2>Comparisons &amp; alternatives</h2>
+    <p class="sub">Honest comparisons against other jobs-data and intent-data providers.</p>
+    <div class="grid">
+      <a href="https://jobspipe.dev/alternatives">All alternatives</a>
+      <a href="https://jobspipe.dev/alternatives/coresignal">vs Coresignal</a>
+      <a href="https://jobspipe.dev/alternatives/theirstack">vs TheirStack</a>
+      <a href="https://jobspipe.dev/alternatives/fantastic-jobs">vs Fantastic.jobs</a>
+      <a href="https://jobspipe.dev/alternatives/jsearch">vs JSearch</a>
+      <a href="https://jobspipe.dev/alternatives/adzuna">vs Adzuna</a>
+      <a href="https://jobspipe.dev/alternatives/bright-data">vs Bright Data</a>
+      <a href="https://jobspipe.dev/intent-data-providers">Intent-data providers</a>
+      <a href="https://jobspipe.dev/ai-recruiting-companies">AI recruiting companies</a>
+      <a href="https://jobspipe.dev/cognism-alternatives">Cognism alternatives</a>
+    </div>
+
+    <h2>Guides &amp; analysis</h2>
+    <p class="sub">Technical guides, the blog, and original jobs-market data.</p>
+    <div class="grid">
+      <a href="https://jobspipe.dev/blog">Blog</a>
+      <a href="https://jobspipe.dev/guides">Guides</a>
+      <a href="https://jobspipe.dev/glossary">Glossary</a>
+      <a href="https://jobspipe.dev/blog/best-jobs-api-2026">Best jobs APIs in 2026</a>
+      <a href="https://jobspipe.dev/blog/upwork-statistics-2026">Upwork statistics 2026</a>
+      <a href="https://jobspipe.dev/how-to-scrape-upwork">How to scrape Upwork</a>
+    </div>
 
     <footer>
-      Maintained by <a href="https://jobspipe.dev/">JobsPipe</a>. Data sourced
-      from public job listings. Open sample released under CC BY 4.0.
+      Maintained by <a href="https://jobspipe.dev/">JobsPipe</a> · A unified API for
+      public job postings. Open datasets released under CC BY 4.0.
     </footer>
   </main>
 </body>
